@@ -22,7 +22,7 @@ def paycheck():
     wage = float(input("What's your hourly wage? "))
     hours = float(input("How many hours did you worked in last month? "))
     total_pay = wage * hours
-    print(f"You've earned {paycheck:.2f}$")
+    print(f"You've earned {total_pay:.2f}$")
 
 paycheck() 
 
