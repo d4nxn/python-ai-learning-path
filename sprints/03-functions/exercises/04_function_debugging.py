@@ -4,13 +4,13 @@
 Исправляй по одной. Рядом оставляй комментарий: тип ошибки, причина, исправление.
 """
 
-def greet(name)
+def greet(name): #SyntaxError: не было двоеточия
     print(f"Hello, {name}")
 
 
 def add(a, b):
     result = a + b
-
+    return result # Logical error - function were returning None instead of result
 
 total = add(10, 20)
 print(total)
@@ -19,7 +19,7 @@ print(total)
 def calculate_total(items):
     total = 0
     for item in items:
-        total += item["amount"]
+        total += item["price"]#KeyError: no "amount" value in products, was replaced for "price"
     return total
 
 
@@ -38,6 +38,6 @@ def is_positive(number):
         return False
 
 
-if is_positive:
+if is_positive(3):  # Logical error: checked the function object instead of its return value; added a call with an argument
     print("Positive")
 
